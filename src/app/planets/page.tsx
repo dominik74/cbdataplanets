@@ -7,7 +7,7 @@ import MainContainer from "@/components/MainContainer";
 import MainDiv from "@/components/MainDiv";
 import RootDiv from "@/components/RootDiv";
 import StatusBar from "@/components/StatusBar";
-import Planet from "@/types/planet";
+import Planet from "@/types/Planet";
 import PlanetJson from "@/types/PlanetJson";
 import { createContext, useEffect, useState } from "react";
 import reloadIcon from "@/assets/icons/reload.svg"

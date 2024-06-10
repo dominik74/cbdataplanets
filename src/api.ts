@@ -1,7 +1,7 @@
 import { ResidentJson } from "./types/ResidentJson";
-import { JsonData } from "./types/jsonData";
-import Planet from "./types/planet";
-import PlanetJson from "./types/planet.json";
+import { JsonData } from "./types/JsonData";
+import Planet from "./types/Planet";
+import PlanetJson from "./types/PlanetJson";
 
 export namespace Api {
 	export async function fetchData(url: string = "https://swapi.dev/api/planets") {

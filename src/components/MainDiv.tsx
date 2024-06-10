@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { Button } from "./Button";
 import { AppContext } from "@/AppContext";
-import Planet from "@/types/planet";
+import Planet from "@/types/Planet";
 import { H1 } from "./H1";
 import styled from "styled-components";
 import { A } from "./A";

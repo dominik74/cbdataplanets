@@ -1,5 +1,5 @@
 import { createContext } from "react";
-import Planet from "./types/planet";
+import Planet from "./types/Planet";
 
 interface AppContextType {
 	planets: Planet[];
