@@ -21,7 +21,11 @@ interface Props {
 export default function StatusBar(props: Props): React.ReactNode {
   return (
     <StyledStatusBar $error={props.error} $hide={props.message === ""}>
-      {props.message}
+      {props.message !== "" ?
+        <>{props.message}</>
+          :
+        <>Hotovo</>
+      }
     </StyledStatusBar>
   );
 }

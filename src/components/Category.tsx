@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import styled from "styled-components"
 
 import config from "../../next.config.mjs";
+import { P } from "./P";
 
 interface StyleProps {
 	$isSubCategory: boolean;
@@ -58,6 +59,13 @@ export default function Category(props: Props) {
 	const [isExpanded, setIsExpanded] = useState(false);
 
 	useEffect(() => {
+		if (isExpanded && props.children == "") {
+			// props.onExpand();
+			setIsExpanded(false);
+		}
+	}, [props.children])
+
+	useEffect(() => {
 		if (isExpanded) {
 			console.log("fetching data...");
 			props.onExpand();
@@ -71,12 +79,16 @@ export default function Category(props: Props) {
 				{props.name}</StyledHeaderDiv>
 			{isExpanded && 
 				<>
-					{props.children ? 
+					{props.children != "" ? 
+						<>
 							<StyledChildrenDiv>
 								{props.children}
 							</StyledChildrenDiv>
+						</>
 						:
-							<p>Loading...</p>
+						<>
+							<P>Loading...</P>
+						</>
 					}
 				</>
 			}
