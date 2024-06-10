@@ -1,3 +1,4 @@
 {
-  "/planets/page": "app/planets/page.js"
+  "/planets/page": "app/planets/page.js",
+  "/page": "app/page.js"
 }
