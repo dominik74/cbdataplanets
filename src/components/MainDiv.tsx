@@ -9,6 +9,7 @@ import Category from "./Category";
 import { Resident } from "@/types/Resident";
 import { Api } from "@/api";
 import { ResidentJson } from "@/types/ResidentJson";
+import { P } from "./P";
 
 const StyledMainDiv = styled.div`
 	display: flex;
@@ -76,14 +77,14 @@ export default function MainDiv(props: Props) {
 				<>
 					<H1>{planet.name}</H1>
 					<StyledContentDiv>
-						<p>rotation period: {planet.rotationPeriod}</p>
-						<p>orbital period: {planet.orbitalPeriod}</p>
-						<p>diameter: {planet.diameter}</p>
-						<p>climate: {planet.climate}</p>
-						<p>gravity: {planet.gravity}</p>
-						<p>terrain: {planet.terrain}</p>
-						<p>surface water: {planet.surfaceWater}</p>
-						<p>population: {planet.population}</p>
+						<P>rotation period: {planet.rotationPeriod}</P>
+						<P>orbital period: {planet.orbitalPeriod}</P>
+						<P>diameter: {planet.diameter}</P>
+						<P>climate: {planet.climate}</P>
+						<P>gravity: {planet.gravity}</P>
+						<P>terrain: {planet.terrain}</P>
+						<P>surface water: {planet.surfaceWater}</P>
+						<P>population: {planet.population}</P>
 
 						{planet.residentsUrls && planet.residentsUrls.length > 0 &&
 							<Category name="residents"
@@ -93,13 +94,13 @@ export default function MainDiv(props: Props) {
 											  onExpand={() => null}
 											  isSubCategory={true}
 											  key={id}>
-										<p>name: {resident.name}</p>
-										<p>height: {resident.height}</p>
-										<p>mass: {resident.mass}</p>
-										<p>hair color: {resident.hairColor}</p>
-										<p>eye color: {resident.eyeColor}</p>
-										<p>birth year: {resident.birthYear}</p>
-										<p>gender: {resident.gender}</p>
+										<P>name: {resident.name}</P>
+										<P>height: {resident.height}</P>
+										<P>mass: {resident.mass}</P>
+										<P>hair color: {resident.hairColor}</P>
+										<P>eye color: {resident.eyeColor}</P>
+										<P>birth year: {resident.birthYear}</P>
+										<P>gender: {resident.gender}</P>
 										<span>homeworld: </span><A href={resident.homeworld}>{resident.homeworld}</A><br />
 										<span>url: </span><A href={resident.url}>{resident.url}</A><br />
 									</Category>
@@ -117,7 +118,7 @@ export default function MainDiv(props: Props) {
 							</Category>
 						}
 
-						<p><span>url: <A href={planet.url}>{planet.url}</A></span></p>
+						<P><span>url: <A href={planet.url}>{planet.url}</A></span></P>
 					</StyledContentDiv>
 					<StyledOtherInfoDiv>
 						Vytvořeno: {planet.created.toDateString()}
@@ -126,7 +127,7 @@ export default function MainDiv(props: Props) {
 					</StyledOtherInfoDiv>
 				</>
 			) : (
-				<p>Žádná planeta nevybrána.</p>
+				<P>Žádná planeta nevybrána.</P>
 			)}
 		</StyledMainDiv>
 	)

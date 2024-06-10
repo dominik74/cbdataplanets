@@ -13,6 +13,11 @@ import { createContext, useEffect, useState } from "react";
 import reloadIcon from "@/assets/icons/reload.svg"
 import { IconButton } from "@/components/IconButton";
 import { H2 } from "@/components/H2";
+import styled from "styled-components";
+
+const StyledErrorButton = styled(IconButton)`
+	float: right;
+`;
 
 export default function Planets() {
 	const [planets, setPlanets] = useState<Planet[]>([]);
@@ -77,7 +82,7 @@ export default function Planets() {
 									disabled={nextUrl === null}>
 								<img src="/arrow-right.svg" alt="Arrow" />
 							</IconButton>
-							<IconButton className="float-right" onClick={() => fetchData("error")}>Err</IconButton>
+							<StyledErrorButton onClick={() => fetchData("error")}>Err</StyledErrorButton>
 						</Aside>
 						<MainDiv selectedPlanetId={selectedPlanetId} />
 					</MainContainer>

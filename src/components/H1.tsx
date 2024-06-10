@@ -5,4 +5,5 @@ export const H1 = styled.h1`
 	font-size: 32px;
 	border-bottom: 1px solid lightgray;
 	text-align: right;
+	font-weight: normal;
 `;

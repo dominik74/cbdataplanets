@@ -12,6 +12,7 @@ export const Button = styled.button`
 	border-radius: 2px;
 	text-align: center;
 	vertical-align: middle;
+	cursor: pointer;
 
 	&:hover:enabled {
 		background-color: #0066cc2e;

@@ -13,6 +13,11 @@ interface StyledLiProps {
 	$isSelected: boolean;
 }
 
+const StyledUl = styled.ul`
+	list-style-type: none;
+	padding-left: 0px;
+`;
+
 const StyledLi = styled.li<StyledLiProps>`
 	background-color: ${props => (props.$isSelected ? "#0066cc2e" : "none")};
 	border: 1px solid ${props => (props.$isSelected ? "#0066cc" : "transparent")};
@@ -44,11 +49,11 @@ export default function Aside(props: Props) {
 	return (
 		<StyledAside>
 			{props.children}
-			<ul>
+			<StyledUl>
 				{planets.map((planet, i) => (
 					<StyledLi key={i} $isSelected={i === props.selectedPlanetId} onClick={() => selectPlanet(i)}>{planet.name}</StyledLi>
 				))}
-			</ul>
+			</StyledUl>
 		</StyledAside>	
 	)
 }

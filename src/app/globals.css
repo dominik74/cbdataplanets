@@ -1,4 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* @tailwind base; */
+/* @tailwind components; */
+/* @tailwind utilities; */
+
+* {
+	line-height: 1.5;
+}
 
