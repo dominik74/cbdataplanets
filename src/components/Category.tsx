@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components"
 
+import config from "../../next.config.mjs";
+
 interface StyleProps {
 	$isSubCategory: boolean;
 }
@@ -65,7 +67,7 @@ export default function Category(props: Props) {
 	return (
 		<StyledCategory $isSubCategory={props.isSubCategory ? props.isSubCategory : false}>
 			<StyledHeaderDiv onClick={() => setIsExpanded(!isExpanded)} $isSubCategory={props.isSubCategory ? props.isSubCategory : false}>
-				<img src={isExpanded ? "/arrow-down.svg" : "/arrow-right.svg"} alt="arrow" />
+				<img src={isExpanded ? config.basePath + "/arrow-down.svg" : config.basePath + "/arrow-right.svg"} alt="arrow" />
 				{props.name}</StyledHeaderDiv>
 			{isExpanded && 
 				<>

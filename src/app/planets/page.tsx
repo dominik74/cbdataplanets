@@ -15,6 +15,8 @@ import { IconButton } from "@/components/IconButton";
 import { H2 } from "@/components/H2";
 import styled from "styled-components";
 
+import config from "../../../next.config.mjs";
+
 const StyledErrorButton = styled(IconButton)`
 	float: right;
 `;
@@ -72,15 +74,15 @@ export default function Planets() {
 						<Aside selectedPlanetId={selectedPlanetId} setSelectedPlanetId={setSelectedPlanetId}>
 							<H2>Planety</H2>
 							<IconButton onClick={() => fetchData(currentUrl)}>
-								<img src="/reload.svg" alt="Reload" />
+								<img src={config.basePath + "/reload.svg"} alt="Reload" />
 							</IconButton>
 							<IconButton onClick={() => fetchData(prevUrl)}
 										disabled={prevUrl === null}>
-								<img src="/arrow-left.svg" alt="Arrow" />
+								<img src={config.basePath + "/arrow-left.svg"} alt="Arrow" />
 							</IconButton>
 							<IconButton onClick={() => fetchData(nextUrl)}
 									disabled={nextUrl === null}>
-								<img src="/arrow-right.svg" alt="Arrow" />
+								<img src={config.basePath + "/arrow-right.svg"} alt="Arrow" />
 							</IconButton>
 							<StyledErrorButton onClick={() => fetchData("error")}>Err</StyledErrorButton>
 						</Aside>
