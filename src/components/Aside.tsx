@@ -7,6 +7,7 @@ const StyledAside = styled.aside`
 	border-right: 1px solid lightgray;
 	padding: 16px;
 	background: rgb(234, 234, 234);
+ 	overflow-y: auto;
 `;
 
 interface StyledLiProps {
