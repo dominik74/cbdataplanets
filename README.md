@@ -38,4 +38,4 @@ Aplikace je částečně responzivní. Rozhraní není navrženo pro mobilní za
 
 # Poznámka
 
-Na bočním panelu je tlačítko s nápisem "ERR", které slouží pouze pro vizuální prezentaci chybové zprávy. Aplikace by ale měla přesto samovolně zobrazovat chybové zprávy, pokud dojde k problému.
+Na bočním panelu je tlačítko s nápisem "Err", které slouží pouze pro vizuální prezentaci chybové zprávy. Aplikace by ale měla přesto samovolně zobrazovat chybové zprávy, pokud dojde k problému.
