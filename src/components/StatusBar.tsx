@@ -7,6 +7,8 @@ interface StyledStatusBarProps {
 
 const StyledStatusBar = styled.div<StyledStatusBarProps>`
   background-color: ${props => (props.$error ? "#fecaca" : "rgb(234, 234, 234)")};
+  position: absolute;
+  width: 100vw;
   text-align: center;
   align-self: stretch;
   visibility: ${props => (props.$hide ? "hidden" : "visible")};

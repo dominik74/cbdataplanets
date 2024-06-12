@@ -5,7 +5,7 @@ const StyledRootDiv = styled.div`
 	flex-direction: column;
 	height: 100vh;
 
-	@media (min-width: 790px) {
+	@media (min-width: 1054px) {
 		align-items: center;
 	}
 `;

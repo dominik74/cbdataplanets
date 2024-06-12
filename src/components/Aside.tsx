@@ -17,6 +17,7 @@ interface StyledLiProps {
 const StyledUl = styled.ul`
 	list-style-type: none;
 	padding-left: 0px;
+	margin: 0;
 `;
 
 const StyledLi = styled.li<StyledLiProps>`
