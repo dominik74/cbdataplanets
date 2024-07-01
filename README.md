@@ -1,4 +1,4 @@
-# cbdataplanets
+# Planets
 
 Aplikace prezentující data o různých planetách a jejich obyvatelích.
 
